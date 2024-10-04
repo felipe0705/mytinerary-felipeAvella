@@ -1,0 +1,40 @@
+#root {
+  max-width:initial;
+  
+   
+}
+
+.logo {
+  height: 4em;  
+  will-change: filter;
+  transition: filter ;
+  
+}
+.logo:hover {
+  
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom {
+  animation: zoom 10s infinite;
+}
