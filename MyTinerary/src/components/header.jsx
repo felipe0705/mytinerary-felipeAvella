@@ -1,35 +1,16 @@
-
-import { useState } from "react";
-import "./App.css";
-
-const Navbar = () => {
  
+import { useState } from "react";
 
-  return (
-    <nav className="fixed p-3 w-full text-white z-10">
-      <div className=" bg-half-transparent flex justify-between px-6 w-full md:w-auto items-center">
-        <div className="">
-          <Menu></Menu>
-        </div>
-        <div className="flex flex-none items-center  ">
-          <img src="./ico.png" className="logo animate-pulse " alt="React logo" />
-          
-        </div>
 
-        <div className="flex px-6 py-2 ">
-          <button className="bg-yellow-300 hover:bg-yellow-600 text-white font-bold py-1 px-1 rounded-full">
-            <img src="/piña.png" className="logo " alt="logo" />
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};
-function Menu() {
+function Navbar() {
   const [visivel, setVisivel] = useState(false);
 
   return (
-    <div className=" flex p-3 items-center ">
+    <nav className="fixed p-3 w-full text-white z-10">
+      |
+      <div className=" bg-half-transparent flex justify-between px-6 w-full md:w-auto items-center">
+        <div className="">
+        <div className=" flex p-3 items-center ">
       <div className="flex flex-col " onClick={() => setVisivel(!visivel)}>
         <div
           className={`${
@@ -70,7 +51,20 @@ function Menu() {
         </ul>
       </div>
     </div>
+        </div>
+        <div className="flex flex-none items-center  ">
+          <img src="./ico.png" className="logo animate-pulse " alt="React logo" />
+          
+        </div>
+
+        <div className="flex px-6 py-2 ">
+          <button className="bg-yellow-300 hover:bg-yellow-600 text-white font-bold py-1 px-1 rounded-full">
+            <img src="/piña.png" className="logo " alt="logo" />
+          </button>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default Navbar;
