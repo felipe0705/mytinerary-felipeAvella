@@ -1,49 +1,51 @@
 import { PiCityBold } from "react-icons/pi";
+import { BsArrowLeftCircle } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
-  const CallToAction = () => {
-    return (
-      <div className=" flex  items-center justify-center ">
-        <div className="  p-2 rounded-lg  ">
-          <PiCityBold className="text-slate-400 hover:text-sky-400 border-b-4 border-gray-600 text-6xl backdrop-blur ml-20 animate-bounce" />
-          <h2 className="text-2xl font-bold mb-4 backdrop-blur">!Hey you visit cities</h2>
-          <a
-            href="/cities"
-            className="inline-block bg-sky-400 text-white rounded-full px-4 py-2 text-xl  hover:bg-blue-600  transform transition duration-500 hover:scale-105"
-          >
-            Explore Now!
-          </a>
-        </div>
-      </div>
-    );
-  };
+  const routes = [{ to: "/Cities", text: "Cities" }];
   return (
     <>
-      <div className=" absolute bg-fixed rounded-lg overflow-hidden w-screen h-screen object-cover object-center brightness-[.65] shadow-lg false">
+      <div className=" absolute overflow-hidden w-full h-screen ">
         <img
-          className="animate-zoom h-full w-full   "
-          src="travel.jpg"
+          className="animate-zoom absolute h-full w-full object-cover object-center brightness-[.65] shadow-lg  false"
+          src="viajes.jpeg"
           alt="travel.png"
         />
       </div>
+      <section className="h-screen flex flex-col pt-48 items-center text-center justify-center  max-w-md gap-4 m-auto">
 
-      <section className="h-screen flex flex-col justify-center items-center text-center   max-w-md m-auto ">
-        
-        <h1 className="text-5xl text-white font-bold backdrop-blur ">My Tineraries
+        <h1 className="text-5xl relative text-white rounded-full p-2 italic font-mono font-bold ">
+          My Tineraries
         </h1>
-        
-        <CallToAction></CallToAction>
-        
-          <p className=" w-full rounded-lg shadow-lg  p-1 text-xl italic font-mono  backdrop-blur  text-white  hover:text-sky-400 ">
-            &quot;Find your perfect trip, designed by insiders who know and love
-            their cities!&quot;
-          </p>
 
-          
+        <p className="  w-full rounded-full mt-28  p-2 text-xl italic font-mono  backdrop-blur  text-white  hover:text-sky-400 ">
+          &quot;Find your perfect trip, designed by insiders who know and love
+          their cities!&quot;
+        </p>
         
+        <div className="relative mt-28 flex">
+        <PiCityBold className="text-sky-400  text-6xl "/>
+        <PiCityBold className="text-sky-400 text-6xl  "/>
+        </div>
+        <h2 className="text-2xl text-white  italic font-mono  backdrop-blur">
+          !Hey you visit cities
+        </h2>
+
+        <div className="flex w-full items-center justify-center ">
+        {routes.map((r, index) => (
+          <button
+            key={index}
+            className={
+              " bg-blue-600 text-white rounded-full px-4 py-2 text-xl italic font-mono hover:bg-sky-400 transform transition duration-500 hover:scale-10"
+            }
+          >
+            <NavLink to={routes.to}>Explore Now!</NavLink>
+          </button>
+        ))}
+        <BsArrowLeftCircle className="text-sky-400 text-6xl  horizontal-bounce" />
+        </div>
       </section>
-
-      
     </>
   );
 }

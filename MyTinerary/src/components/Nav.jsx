@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
   const [visivel, setVisivel] = useState(false);
@@ -11,63 +12,61 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed p-3 w-full text-white z-10">
-      <div className=" bg-half-transparent  flex justify-between px-6 w-full md:w-auto items-center">
-        <div>
-          <div className=" flex p-3 items-center ">
+    <div className=" flex fixed w-full  items-center text-white z-10 bg-half-transparent justify-between rounded-lg p-3 ">
+      <div>
+        <div className=" flex p-3 items-center ">
+          <div className="flex flex-col " onClick={() => setVisivel(!visivel)}>
             <div
-              className="flex flex-col "
-              onClick={() => setVisivel(!visivel)}
+              className={`${
+                visivel && "rotate-45 translate-y-2"
+              } h-1 w-8 mb-1 bg-white transition duration-500`}
+            />
+            <div
+              className={`${
+                visivel && "rotate-negative-45"
+              } h-1 w-8 mb-1 bg-white transition duration-600`}
+            />
+            <div
+              className={`${
+                visivel ? "hidden" : "flex"
+              } h-1 w-8 mb-1 bg-white transition duration-600`}
+            />
+          </div>
+          <div>
+            <ul
+              className={`${
+                visivel ? "w-full sm:w-48" : "w-0"
+              } transition-width duration-500 flex flex-col font-bold h-2/4 fixed  top-28 left-3 bg-half-transparent justify-around items-center`}
             >
-              <div
-                className={`${
-                  visivel && "rotate-45 translate-y-2"
-                } h-1 w-8 mb-1 bg-white transition duration-500`}
-              />
-              <div
-                className={`${
-                  visivel && "rotate-_45"
-                } h-1 w-8 mb-1 bg-white transition duration-600`}
-              />
-              <div
-                className={`${
-                  visivel ? "hidden" : "flex"
-                } h-1 w-8 mb-1 bg-white transition duration-600`}
-              />
-            </div>
-            <div >
-              <ul
-                className={`${
-                  visivel ? "w-full sm:w-48" : "w-0"
-                } transition-width duration-500 flex flex-col font-bold h-2/4 fixed  top-28 left-3 bg-half-transparent justify-around items-center`}
-              >
-                {routes.map((r, index) => (
-                  <button
-                    key={index}
-                    className={`${visivel ? "flex" : "hidden"
-                    } text-white hover:text-blue-400 p-3 border-solid border-2 border-sky-500 rounded-full`}>
-                      <NavLink to={r.to}>{r.text}</NavLink>
-                  </button>
-                ))}
-              </ul>
-            </div>
+              {routes.map((r, index) => (
+                <button
+                  key={index}
+                  className={`${
+                    visivel ? "flex" : "hidden"
+                  } text-white hover:text-blue-400 p-3 border-solid border-2 border-sky-500 rounded-full`}
+                >
+                  <NavLink to={r.to}>{r.text}</NavLink>
+                </button>
+              ))}
+            </ul>
           </div>
         </div>
-        <div>
-          <img
-            src="./ico.png"
-            className="logo animate-pulse "
-            alt="React logo"
-          />
-        </div>
-
-        <div className="flex px-6 py-2 ">
-          <button className="bg-yellow-300 hover:bg-yellow-600 text-white font-bold py-1 px-1 rounded-full">
-            <img src="/piña.png" className="logo " alt="logo" />
-          </button>
-        </div>
       </div>
-    </nav>
+      <div>
+        <img
+          src="./ico.png"
+          className="logo animate-pulse "
+          alt="React logo"
+        />
+      </div>
+      <div>
+        <button className="text-white font-bold p-3 rounded-full">
+          <FaUserCircle className="text-4xl m-auto "></FaUserCircle>
+          <h2 className=" text-2xl font-semibold text-gray-700">login</h2>
+          
+        </button>
+      </div>
+    </div>
   );
 }
 

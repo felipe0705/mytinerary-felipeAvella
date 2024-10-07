@@ -11,7 +11,7 @@ export default function Homelayout() {
         <Navbar></Navbar>
       </header>
         <Home></Home>
-      <main>
+      <main className="w-full bg-gradient-to-r from-cyan-500 to-blue-500">
         <Outlet></Outlet>
       </main>
 

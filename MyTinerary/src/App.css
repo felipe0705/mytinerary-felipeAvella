@@ -1,3 +1,14 @@
+*,:before,:after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb
+}
+
+:before,:after {
+  --tw-content: ""
+}
+
 #root {
   max-width:initial;
   
@@ -15,8 +26,51 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.card {
-  padding: 2em;
+.elemento::before {
+  
+  color: red;
+  margin-right: 5px;
+}
+
+.rotate-negative-45 {
+  transform: rotate(-45deg);
+}
+.bg-salmon {
+  background-color: #E7C192;
+}
+.bg-transparent {
+  background-color: rgba(0,0,0,0);
+}
+.bg-half-transparent {
+  background-color: rgba(0,0,0,0.8);
+}
+.transition-width {
+  transition: width 0.5s 
+}
+
+@keyframes horizontal-bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25%);
+  }
+}
+
+.horizontal-bounce {
+  animation: horizontal-bounce 1s infinite;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem;
 }
 
 .read-the-docs {
@@ -24,17 +78,17 @@
 }
 
 @keyframes zoom {
-  0% {
+  0%,to {
     transform: scale(1);
+    transform-origin: right top
   }
   50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+    transform: scale(1.7);
+    transform-origin: right bottom
+}
+  
 }
 
 .animate-zoom {
-  animation: zoom 8s infinite;
+  animation: zoom 80s ease-in-out infinite;
 }
