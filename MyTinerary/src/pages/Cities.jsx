@@ -1,12 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
-import Navbar from "../components/header";
-import Body from "../components/body";
+
+
 
 export default function Cities() {
     return(
         <>
-        <Navbar></Navbar>
-        <Body></Body>        
+        
         </>
     )
 }
