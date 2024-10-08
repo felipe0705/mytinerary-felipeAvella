@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngellist, FaAngleRight } from "react-icons/fa";
 
-
 const slides = [
   [
     { src: "./NewYork.jpg", alt: "New York" },
@@ -84,7 +83,7 @@ function Carousel() {
         <button
           onClick={prevSlide}
           className=" transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-1"
-        >        
+        >
           <FaAngleLeft />
         </button>
         <button
@@ -103,15 +102,12 @@ export default function BodyHome() {
     <>
       
       <section className="flex  max-md:flex-wrap-reverse gap-8 items-center">
-        <div className=" flex justify-start  ">
-            <img src="./2.jpg" className=" w-full  h-96 " alt="React logo" />
-            </div>
         <div className="flex flex-col h-full items-center backdrop-blur  md:w-5/12 gap-6 xs:gap-12 bg-slate-700 p-8 rounded-lg shadow-xl">
           <div className="font-bold text-white text-3xl sm:text-4xl">
-          WELCOME
+            WELCOME
           </div>
           <div className="text-white text-2xl">
-          Here you will find the perfect route for an unforgettable trip
+            Here you will find the perfect route for an unforgettable trip
           </div>
           <a
             className="disabled:cursor-not-allowed disabled:brightness-75 hover:bg-blue-600 active:scale-95 disabled:active:scale-100  transition-all bg-blue-700 text-white shadow-lg font-bold rounded-lg p-3 text-center  max-w-xs w-full text-xl"
@@ -122,7 +118,7 @@ export default function BodyHome() {
         </div>
 
         <div className="flex flex-col w-full grow justify-between items-center gap-6">
-          <h2 className="text-center font-bold text-3xl text-white ">
+          <h2 className="text-center font-bold text-3xl sm:text-4xl  ">
             Popular Tineraries
           </h2>
           <div className="flex justify-center items-center relative">

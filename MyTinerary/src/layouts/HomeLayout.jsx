@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Nav";
 import Home from "../components/body";
 import Footer from "../components/footer";
+import backgroundImage from '../../public/2.jpg';
 
 export default function Homelayout() {
   return (
@@ -12,7 +13,7 @@ export default function Homelayout() {
         <Navbar></Navbar>
       </header>
         <Home></Home>
-      <main >
+      <main className="flex-1 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
       
         <Outlet>
         

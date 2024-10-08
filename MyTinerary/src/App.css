@@ -1,29 +1,21 @@
-
-
-#root {
-  max-width:initial;
-    
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
 }
 
-
-
+main {
+  margin: 20px; /* Ajusta según tus necesidades */
+  padding: 20px; /* Ajusta según tus necesidades */
+  background-color: #f0f0f0; /* Color de fondo para el main */
+}
 
 .logo {
   position: relative;
   z-index: 1; /* Asegura que el logo esté por encima del fondo */
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 .logo {
   height: 4em;  
@@ -36,11 +28,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.elemento::before {
-  
-  color: red;
-  margin-right: 5px;
-}
+
 
 .rotate-negative-45 {
   transform: rotate(-45deg);

@@ -13,13 +13,13 @@ export default function Home() {
           alt="travel.png"
         />
       </div>
-      <section className="flex flex-col  justify-around items-center text-center  w-full max-w-md  m-auto">
-        <div className="">
+      <section className="flex flex-col pt-40 h-screen justify-center items-center text-center  w-full max-w-md gap-y-10 m-auto">
+        <div >
           <h1 className="text-5xl relative text-white rounded-full  italic font-mono font-bold ">
             My Tineraries
           </h1>
 
-          <p className="  w-full rounded-full   p-2 text-xl italic font-mono  backdrop-blur  text-white  hover:text-sky-400 ">
+          <p className="  w-full rounded-full  mt-10 p-2 text-xl italic font-mono  backdrop-blur  text-white  hover:text-sky-400 ">
             &quot;Find your perfect trip, designed by insiders who know and love
             their cities!&quot;
           </p>
