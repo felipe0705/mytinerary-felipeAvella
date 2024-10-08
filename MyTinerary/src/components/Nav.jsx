@@ -8,11 +8,11 @@ function Navbar() {
   const [visivel, setVisivel] = useState(false);
   const routes = [
     { to: "/", text: "Home" },
-    { to: "/Cities", text: "Cities" },
+    { to: "/cities", text: "Cities" },
   ];
 
   return (
-    <div className=" flex fixed w-full  items-center text-white z-10 bg-half-transparent justify-between rounded-lg p-3 ">
+    <div className=" flex fixed w-full  items-center text-white z-10 bg-half-transparent justify-between rounded-lg  ">
       <div>
         <div className=" flex p-3 items-center ">
           <div className="flex flex-col " onClick={() => setVisivel(!visivel)}>
@@ -62,8 +62,7 @@ function Navbar() {
       <div>
         <button className="text-white font-bold p-3 rounded-full">
           <FaUserCircle className="text-4xl m-auto "></FaUserCircle>
-          <h2 className=" text-2xl font-semibold text-gray-700">login</h2>
-          
+          <h2 className=" text-2xl font-semibold italic font-mono text-white">login</h2>          
         </button>
       </div>
     </div>

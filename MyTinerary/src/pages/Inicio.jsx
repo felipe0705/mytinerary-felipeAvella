@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { FaAngleLeft, FaAngellist, FaAngleRight } from "react-icons/fa";
 
@@ -47,7 +48,7 @@ function Carousel() {
     <>
       <div className="overflow-hidden rounded-2xl">
         <div
-          className="flex aspect-video duration-300"
+          className="flex aspect-video duration-10000"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
@@ -64,13 +65,13 @@ function Carousel() {
                   />
                   <div className="absolute right-0 top-0 px-4 m-4 py-2 rounded-lg text-2xl gap-2 flex bg-black/20">
                     <button
-                      class="drop-shadow-sm fa-heart fa-solid text-white"
+                      className="drop-shadow-sm fa-heart fa-solid text-white"
                       aria-hidden="true"
                     >
                       <FaAngellist></FaAngellist>
                     </button>
                   </div>
-                  <h1 class="absolute bottom-0 xs:text-lg py-2 px-4 bg-gradient-to-tr from-blue-800 to-blue-600 font-medium rounded-tr-lg shadow-lg">
+                  <h1 className="absolute bottom-0 xs:text-lg py-2 px-4 bg-gradient-to-tr from-blue-800 to-blue-600 font-medium rounded-tr-lg shadow-lg">
                     {image.alt}
                   </h1>
                 </div>
@@ -82,13 +83,13 @@ function Carousel() {
       <div className="absolute w-full mt-10 justify-between flex hover:[&>*]:bg-white/50 [&>*]:px-4 [&>*]:py-2 [&>*]:rounded-full text-neutral-100 text-3xl  sm:text-5xl">
         <button
           onClick={prevSlide}
-          className=" transform -translate-y-1/2 bg-gray-800 text-white p-2"
+          className=" transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-1"
         >        
           <FaAngleLeft />
         </button>
         <button
           onClick={nextSlide}
-          className=" transform -translate-y-1/2 bg-gray-800 text-white p-2"
+          className=" transform -translate-y-1/2 bg-gray-800 bg-opacity-75 text-white p-1"
         >
           <FaAngleRight />
         </button>
@@ -100,12 +101,16 @@ function Carousel() {
 export default function BodyHome() {
   return (
     <>
+      
       <section className="flex  max-md:flex-wrap-reverse gap-8 items-center">
-        <div className="flex flex-col h-full items-center  md:w-5/12 gap-6 xs:gap-12 bg-slate-700 p-8 rounded-lg shadow-xl">
-          <div className="font-bold text-neutral-900 dark:text-neutral-300 text-3xl sm:text-4xl">
-          welcome
+        <div className=" flex justify-start  ">
+            <img src="./2.jpg" className=" w-full  h-96 " alt="React logo" />
+            </div>
+        <div className="flex flex-col h-full items-center backdrop-blur  md:w-5/12 gap-6 xs:gap-12 bg-slate-700 p-8 rounded-lg shadow-xl">
+          <div className="font-bold text-white text-3xl sm:text-4xl">
+          WELCOME
           </div>
-          <div className="text-neutral-500 dark:text-neutral-200 text-2xl">
+          <div className="text-white text-2xl">
           Here you will find the perfect route for an unforgettable trip
           </div>
           <a
@@ -116,8 +121,8 @@ export default function BodyHome() {
           </a>
         </div>
 
-        <div className="flex flex-col w-full grow justify-between items-center relative gap-6">
-          <h2 className="text-center font-bold text-3xl text-neutral-700 ">
+        <div className="flex flex-col w-full grow justify-between items-center gap-6">
+          <h2 className="text-center font-bold text-3xl text-white ">
             Popular Tineraries
           </h2>
           <div className="flex justify-center items-center relative">
