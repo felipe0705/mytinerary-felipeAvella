@@ -27,9 +27,9 @@ export default function Footer() {
         </div>
         <div className="space-y-2">
           <p className="text-xl font-bold">Contact Us</p>
-          <p>123 Street, City</p>
-          <p>Email: contact@mytinerary.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <p>Colombia, City</p>
+          <p>Email: Piña@mytinerary.com</p>
+          <p>Phone: (320) 000-0090</p>
         </div>
         <div className="space-y-2 grid">
           <p className="text-xl font-bold">Follow Us</p>
