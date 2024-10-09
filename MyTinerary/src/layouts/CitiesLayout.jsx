@@ -1,7 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Nav";
+import Navbar from "../components/navBar";
+import Footer from "../components/footer";
+
 
 export default function Citieslayout() {
   return (
@@ -9,12 +11,13 @@ export default function Citieslayout() {
       <header>
         <Navbar></Navbar>
       </header>
-
-      <main>
+     <main >
         <Outlet></Outlet>
       </main>
 
-      <footer></footer>
+      <footer className="bg-black bg-opacity-50">
+        <Footer></Footer>
+      </footer>
     </>
   );
 }

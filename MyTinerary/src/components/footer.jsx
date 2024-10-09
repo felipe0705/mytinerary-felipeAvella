@@ -1,13 +1,29 @@
+import { SlSocialInstagram, SlSocialFacebook,  SlSocialTwitter } from "react-icons/sl";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 export default function Footer() {
+
+  const [visivel, setVisivel] = useState(false);
+  const routes = [
+    { to: "/", text: "Home" },
+    { to: "/cities", text: "Cities" },
+  ];
+
   return (
     <>
-      <div className="flex flex-wrap gap-8 px-4 justify-between w-[1291px] hover:[&amp;_a]:underline [&amp;_a]:underline-offset-8 [&amp;_a]:decoration-4">
+      <div className="flex flex-wrap gap-8 px-4 justify-between w-full hover:[&amp;_a]:underline [&amp;_a]:underline-offset-8 [&amp;_a]:decoration-4">
         <div className="grid gap-2">
-          <a className="text-xl font-bold" href="/home">
-            Home
-          </a>
-          <a href="/cities">Cities</a>
-          <a href="/signin">Login</a>
+        {routes.map((route, index) => (
+          <NavLink
+            key={index}
+            to={route.to}
+            className="text-xl font-bold text-white hover:text-blue-400"
+            activeClassName="underline"
+          >
+            {route.text}
+          </NavLink>
+        ))}
         </div>
         <div className="space-y-2">
           <p className="text-xl font-bold">Contact Us</p>
@@ -17,20 +33,22 @@ export default function Footer() {
         </div>
         <div className="space-y-2 grid">
           <p className="text-xl font-bold">Follow Us</p>
-          <a href="/home">
-            <i className="fa-brands fa-square-facebook pr-2" aria-hidden="true"></i>
-            Facebook
-          </a>
-          <a href="/home">
-            <i className="fa-brands fa-square-instagram pr-2"
-              aria-hidden="true"
-            ></i>
-            Instagram
-          </a>
-          <a href="/home">
-            <i className="fa-brands fa-square-twitter pr-2" aria-hidden="true"></i>
-            Twitter
-          </a>
+
+          <i className="flex  m-auto pr-2 "> 
+          <SlSocialFacebook className="text-2xl mr-2" />
+             Facebook
+          </i>
+
+          <i className="flex  m-auto pr-2 ">
+          <SlSocialInstagram className="text-2xl mr-2"/>
+             Instagram
+          </i>
+
+          <i
+            className="flex m-auto  pr-2" >
+            <SlSocialTwitter className="text-2xl mr-2" />
+             Twitter
+          </i>
         </div>
       </div>
     </>

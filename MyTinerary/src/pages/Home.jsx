@@ -101,7 +101,7 @@ export default function BodyHome() {
   return (
     <>
       
-      <section className="flex  max-md:flex-wrap-reverse gap-8 items-center">
+      <section className="flex p-10 max-md:flex-wrap-reverse gap-8 items-center">
         <div className="flex flex-col h-full items-center backdrop-blur  md:w-5/12 gap-6 xs:gap-12 bg-slate-700 p-8 rounded-lg shadow-xl">
           <div className="font-bold text-white text-3xl sm:text-4xl">
             WELCOME

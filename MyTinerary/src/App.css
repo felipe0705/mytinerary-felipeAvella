@@ -1,82 +1,14 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  height: 100%;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-main {
-  margin: 20px; /* Ajusta según tus necesidades */
-  padding: 20px; /* Ajusta según tus necesidades */
-  background-color: #f0f0f0; /* Color de fondo para el main */
-}
-
-.logo {
-  position: relative;
-  z-index: 1; /* Asegura que el logo esté por encima del fondo */
-}
-
-
-.logo {
-  height: 4em;  
-  will-change: filter;
-  transition: filter ;
-  
-}
-.logo:hover {
-  
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+    background-color: slategrey;
 }
 
 
 
-.rotate-negative-45 {
-  transform: rotate(-45deg);
-}
-.bg-salmon {
-  background-color: #E7C192;
-}
-.bg-transparent {
-  background-color: rgba(0,0,0,0);
-}
-.bg-half-transparent {
-  background-color: rgba(0,0,0,0.8);
-}
-.transition-width {
-  transition: width 0.5s 
-}
-
-@keyframes horizontal-bounce {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(25%);
-  }
-}
-
-.horizontal-bounce {
-  animation: horizontal-bounce 1s infinite;
-}
 
 
 
-.read-the-docs {
-  color: #888;
-}
 
-@keyframes zoom {
-  0%,to {
-    transform: scale(1);
-    transform-origin: right top
-  }
-  50% {
-    transform: scale(1.7);
-    transform-origin: right bottom
-}
-  
-}
-
-.animate-zoom {
-  animation: zoom 80s ease-in-out infinite;
-}

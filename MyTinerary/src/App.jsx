@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import BodyHome from "./pages/Inicio";
+import BodyHome from "./pages/Home";
 import Homelayout from "./layouts/HomeLayout";
 import Cities from "./pages/Cities";
 import Citieslayout from "./layouts/CitiesLayout";
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   },
   {
     element: <Citieslayout></Citieslayout>,
-    children: [{ path: "/Cities", element: <Cities></Cities> }],
+    children: [{ path:"/Cities", element: <Cities></Cities> }],
   },
 ]);
 

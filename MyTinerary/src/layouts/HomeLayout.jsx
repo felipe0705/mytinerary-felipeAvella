@@ -1,20 +1,23 @@
-// eslint-disable-next-line no-unused-vars
+
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Nav";
+import Navbar from "../components/navBar";
 import Home from "../components/body";
 import Footer from "../components/footer";
-import backgroundImage from '../../public/2.jpg';
+import backgroundImage from '../../public/2.jpeg';
 
 export default function Homelayout() {
   return (
     <>
       <header>
         <Navbar></Navbar>
+        
       </header>
-        <Home></Home>
-      <main className="flex-1 bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      
+      <body>
+      <Home></Home>
+      </body>
+        
+      <main className="flex-1 bg-cover m-4 bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>  
         <Outlet>
         
         </Outlet>
